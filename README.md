@@ -1,81 +1,180 @@
-# Análisis del Tráfico Aéreo Europeo y Oportunidades de Customer Experience para Vuelo Justo
-Analisis-Trafico-Aereo-Europeo-VueloJusto
+# Vuelo Justo | European Air Traffic Market Analysis
 
-Este proyecto analiza patrones de tráfico aéreo europeo con el objetivo de identificar oportunidades de mejora en la experiencia del cliente para la agencia de viajes Vuelo Justo. A partir de datos operativos y comerciales se desarrolló un modelo analítico que permite detectar tendencias de demanda, rutas relevantes y posibles puntos de mejora en la experiencia del pasajero.
+## Business Intelligence Project
 
-Problema de Negocio
+### Business Question
 
-¿Cómo puede Vuelo Justo utilizar datos del tráfico aéreo europeo para mejorar la experiencia de sus clientes y optimizar la toma de decisiones comerciales?
+In which European airport markets should Vuelo Justo prioritize its commercial and Customer Experience initiatives to maximize impact and growth?
 
-Objetivos
+---
 
-Por ejemplo:
+## Project Overview
 
-Analizar el comportamiento del tráfico aéreo.
-Identificar rutas de mayor demanda.
-Detectar patrones estacionales.
-Proponer mejoras en Customer Experience.
-Herramientas Utilizadas
-SQL
-Power BI
-Excel
-Modelado ER
-Modelo de Datos
+This project analyzes European air traffic activity between 2016 and 2022 to identify strategic airport markets with the greatest potential for commercial development and Customer Experience initiatives.
 
-Imagen DER.
+The analysis uses more than 680,000 air traffic records covering 42 countries and 332 airports across Europe.
 
-Proceso Analítico
-Recolección de datos.
-Limpieza.
-Modelado.
-Consultas SQL.
-Visualización.
-Dashboard
+The project combines:
 
-Capturas.
+- Business Intelligence
+- Data Modeling
+- SQL
+- Power BI
+- Data Visualization
+- KPI Design
+- Data Storytelling
 
-Hallazgos
+to transform operational air traffic data into actionable business insights.
 
-Ejemplo:
+---
 
-Aeropuertos con mayor tráfico.
-Países más conectados.
-Estacionalidad de vuelos.
-Segmentos con mayor potencial.
-Recomendaciones
+## Business Context
 
-Esta sección te diferencia mucho.
+Vuelo Justo operates within the tourism and aviation ecosystem.
 
-Por ejemplo:
+Resources for marketing, partnerships and customer experience initiatives are limited, making it necessary to identify which airport markets offer the highest potential for growth.
 
-Customer Experience
-Comunicación proactiva ante retrasos.
-Personalización de ofertas.
-Información de conexiones.
-Negocio
-Potenciar determinadas rutas.
-Promociones estacionales.
-Fidelización.
+Since passenger-level information is not available, air traffic volume is used as a proxy for market opportunity:
 
-├── README.md
-│
-├── docs
-│   └── Caso_de_Negocio.pdf
-│
-├── data
-│   └── vuelos_europa.csv
-│
-├── sql
-│   ├── creacion_tablas.sql
-│   ├── consultas.sql
-│   └── vistas.sql
-│
-├── modelado
-│   └── DER.png
-│
-├── dashboard
-│   ├── VueloJusto.pbix
-│   └── capturas_dashboard.png
-│
-└── presentation
-    └── VueloJusto_Presentacion.pdf
+> Higher air traffic volume → Higher passenger volume potential → Greater opportunity for Customer Experience services.
+
+---
+
+## Objectives
+
+- Identify the most relevant airport markets in Europe.
+- Measure market concentration across countries and airports.
+- Analyze traffic evolution between 2016 and 2022.
+- Evaluate the impact of COVID-19 on air traffic activity.
+- Prioritize strategic markets for future business initiatives.
+
+---
+
+## Dataset
+
+### Coverage
+
+| Metric | Value |
+|----------|----------|
+| Records | 688,099 |
+| Countries | 42 |
+| Airports | 332 |
+| Period | 2016–2022 |
+
+### Main Variables
+
+- Country
+- Airport
+- Year
+- Month
+- IFR Operations
+- Arrivals
+- Departures
+- Total Movements
+
+---
+
+## Data Model
+
+Star Schema
+
+Fact Table:
+
+- Fact_AirTraffic
+
+Dimensions:
+
+- Dim_Date
+- Dim_Airport
+- Dim_Country
+
+---
+
+## Key Performance Indicators
+
+### Volume KPIs
+
+- Total Flights
+- Flights by Country
+- Flights by Airport
+
+### Market KPIs
+
+- Market Share %
+- Top Airports Contribution %
+- Top Countries Contribution %
+
+### Growth KPIs
+
+- YoY Growth %
+- Recovery Rate %
+- Rolling 12 Months
+
+---
+
+## Tools
+
+- SQL
+- Power BI
+- DAX
+- Excel
+- DAX Studio
+
+---
+
+## Main Insights
+
+### Market Concentration
+
+A small number of countries and airport hubs concentrate a significant share of European air traffic activity.
+
+### Strategic Markets
+
+Spain, Germany, United Kingdom and France emerge as the most attractive markets for future growth initiatives.
+
+### COVID Impact
+
+Air traffic experienced a severe contraction during 2020 followed by a gradual recovery.
+
+---
+
+## Business Recommendations
+
+### Short Term
+
+Focus commercial and Customer Experience initiatives on high-volume airport markets.
+
+### Medium Term
+
+Monitor recovery patterns by country and airport.
+
+### Long Term
+
+Develop predictive models to anticipate market growth opportunities.
+
+---
+
+## Dashboard
+
+Power BI dashboard includes:
+
+- Executive KPIs
+- Market Share Analysis
+- Airport Ranking
+- Traffic Evolution
+- Recovery Analysis
+- Strategic Recommendations
+
+---
+
+## Author
+
+Gerónimo Daguerre
+
+Business Intelligence | Data Analytics | Tourism & Aviation Operations
+
+LinkedIn:
+[Add Link]
+
+GitHub:
+[Add Link]
