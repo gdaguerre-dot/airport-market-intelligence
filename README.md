@@ -1,181 +1,109 @@
-# Vuelo Justo | European Air Traffic Market Analysis
+# Airport Market Intelligence
 
-## Business Intelligence Project
+`Power BI` · `SQL` · `Business Intelligence` · `Storytelling` · `Aviation Industry`
 
-### Business Question
+> Caso de consultoría estratégica: dónde debería un operador turístico-aeronáutico priorizar sus esfuerzos comerciales en el mercado aeroportuario europeo, aplicando criterios reales de gestión aeroportuaria (no solo volumen de tráfico).
 
-In which European airport markets should Vuelo Justo prioritize its commercial and Customer Experience initiatives to maximize impact and growth?
-
----
-
-## Project Overview
-
-This project analyzes European air traffic activity between 2016 and 2022 to identify strategic airport markets with the greatest potential for commercial development and Customer Experience initiatives.
-
-The analysis uses more than 680,000 air traffic records covering 42 countries and 332 airports across Europe.
-
-The project combines:
-
-- Business Intelligence
-- Data Modeling
-- SQL
-- Power BI
-- Data Visualization
-- KPI Design
-- Data Storytelling
-
-to transform operational air traffic data into actionable business insights.
+📄 **Documentación completa:** [`pdf/Airport_Market_Intelligence.pdf`](./pdf/Airport_Market_Intelligence.pdf)
+📊 **Dashboard Power BI:** [`powerbi/Airport_Market_Intelligence.pbix`](./powerbi/)
 
 ---
 
-## Business Context
+## Caso de negocio: VueloJusto
 
-Vuelo Justo operates within the tourism and aviation ecosystem.
+VueloJusto opera dentro del ecosistema turístico y aeronáutico. Como en la mayoría de las organizaciones del sector, los recursos destinados a marketing, alianzas estratégicas y experiencia del cliente son limitados — por lo que resulta necesario identificar qué mercados aeroportuarios ofrecen el mayor potencial de crecimiento.
 
-Resources for marketing, partnerships and customer experience initiatives are limited, making it necessary to identify which airport markets offer the highest potential for growth.
+**Pregunta de negocio:**
+¿En qué mercados aeroportuarios europeos debería VueloJusto priorizar sus esfuerzos comerciales y de Customer Experience para maximizar impacto y crecimiento?
 
-Since passenger-level information is not available, air traffic volume is used as a proxy for market opportunity:
+## Por qué este proyecto es distinto a un dashboard de tráfico aéreo
 
-> Higher air traffic volume → Higher passenger volume potential → Greater opportunity for Customer Experience services.
+La mayoría de los análisis de tráfico aéreo se detienen en el volumen: qué país o aeropuerto mueve más vuelos. Este proyecto va un paso más allá, aplicando criterios reales de **gestión comercial y económica aeroportuaria** para transformar el dato de tráfico en un criterio de priorización de negocio:
 
----
-
-## Objectives
-
-- Identify the most relevant airport markets in Europe.
-- Measure market concentration across countries and airports.
-- Analyze traffic evolution between 2016 and 2022.
-- Evaluate the impact of COVID-19 on air traffic activity.
-- Prioritize strategic markets for future business initiatives.
-
----
+- El volumen de operaciones se usa como proxy de demanda potencial (el dataset no incluye datos individuales de pasajeros), pero la **priorización final no se basa solo en volumen**, sino en un modelo de ingreso comercial estimado (pasajeros × gasto medio), en el balance entre capacidad y demanda de cada hub, y en la estabilidad de su recuperación post-pandemia como filtro de riesgo comercial.
+- Esta capa de interpretación surge de experiencia real en operaciones aeroportuarias, Customer Experience y desarrollo de iniciativas para el sector turístico — no es una inferencia genérica sobre el dataset.
 
 ## Dataset
 
-### Coverage
+| Métrica | Valor |
+|---|---|
+| Registros | 688.099 |
+| Países | 42 |
+| Aeropuertos | 332 |
+| Período | 2016–2022 |
+| Fuente | [European Flights Dataset — Kaggle](https://www.kaggle.com/datasets/umerhaddii/european-flights-dataset) |
 
-| Metric | Value |
-|----------|----------|
-| Records | 688,099 |
-| Countries | 42 |
-| Airports | 332 |
-| Period | 2016–2022 |
+**Variables principales:** país, aeropuerto, año, mes, operaciones IFR, llegadas, salidas, movimientos totales.
 
-### Main Variables
+## Modelo de datos
 
-- Country
-- Airport
-- Year
-- Month
-- IFR Operations
-- Arrivals
-- Departures
-- Total Movements
+Esquema de estrella:
 
----
+- **Tabla de hechos:** `Fact_TraficoAereo`
+- **Dimensiones:** `Dim_Fecha`, `Dim_Aeropuerto`, `Dim_Pais`
 
-## Data Model
+## KPIs
 
-Star Schema
+| KPI | Qué mide |
+|---|---|
+| Total de Operaciones | Volumen base del mercado |
+| Top 5 Countries Contribution | Concentración de mercado por país |
+| Top Airports Contribution (Pareto 80/20) | Concentración de mercado por hub |
+| YoY Growth % | Evolución temporal del tráfico |
+| Recovery Rate vs. 2019 | Velocidad y estabilidad de recuperación post-COVID |
+| **Potencial de Ingreso Comercial Estimado** | Operaciones × gasto medio estimado por pasajero — prioriza por oportunidad económica, no solo por volumen |
 
-Fact Table:
+## Principales hallazgos
 
-- Fact_AirTraffic
+- Un número reducido de países y aeropuertos concentra una proporción significativa del tráfico aéreo europeo.
+- España, Alemania, Reino Unido y Francia se perfilan como los mercados de mayor volumen y estabilidad.
+- El tráfico aéreo sufrió una contracción histórica en 2020, con una recuperación gradual y desigual entre mercados.
 
-Dimensions:
+## Recomendaciones estratégicas
 
-- Dim_Date
-- Dim_Airport
-- Dim_Country
+**Corto plazo — Priorización por eficiencia comercial, no solo volumen.**
+Descartar de la priorización aquellos hubs que ya muestran señales de saturación, donde más tráfico no se traduce en mejor experiencia sino en mayor congestión, y priorizar los que combinan alto volumen con capacidad disponible.
 
----
+**Mediano plazo — Priorización por ingreso potencial, no solo por tráfico.**
+Usar el ingreso comercial estimado (no solo el ranking de vuelos) para identificar mercados donde el mismo volumen de operaciones representa una oportunidad económica mayor.
 
-## Key Performance Indicators
+**Largo plazo — Recuperación como filtro de riesgo antes de invertir.**
+Usar la estabilidad de recuperación post-2019 como criterio de riesgo antes de comprometer inversión comercial de largo plazo: mercados con recuperación rápida y sostenida son candidatos más seguros para acuerdos comerciales de mayor plazo.
 
-### Volume KPIs
+## Tecnologías utilizadas
 
-- Total Flights
-- Flights by Country
-- Flights by Airport
+SQL · Power BI · DAX · Modelado Dimensional (Star Schema) · Power Query · Storytelling con datos
 
-### Market KPIs
+## Estructura del repositorio
 
-- Market Share %
-- Top Airports Contribution %
-- Top Countries Contribution %
+```
+README.md
+pdf/
+    Airport_Market_Intelligence.pdf
+sql/
+    01_creacion_tablas.sql
+    02_consultas_exploratorias.sql
+    03_consultas_analiticas.sql
+    04_validaciones_calidad.sql
+powerbi/
+    Airport_Market_Intelligence.pbix
+images/
+    modelo_estrella.png
+    dashboard_vista_general.png
+    dashboard_priorizacion.png
+```
 
-### Growth KPIs
+## Limitaciones del análisis
 
-- YoY Growth %
-- Recovery Rate %
-- Rolling 12 Months
+El dataset no contiene información individual de pasajeros ni indicadores directos de experiencia del cliente. El volumen de operaciones se utiliza como proxy de demanda potencial, y el ingreso comercial estimado se calcula con un valor de referencia conservador, no con datos financieros reales de VueloJusto. Las recomendaciones combinan evidencia del dato con criterio de industria — ambas capas se presentan de forma diferenciada en la documentación completa.
 
----
+## Autor
 
-## Tools
+**Gerónimo Daguerre**
+Business Intelligence · Análisis de Datos · Operaciones Turísticas y de Aviación
 
-- SQL
-- Power BI
-- DAX
-- Excel
-- DAX Studio
+[LinkedIn](https://www.linkedin.com/in/gerodaguerre/) · [GitHub](https://github.com/gdaguerre-dot)
 
----
+## Licencia
 
-## Main Insights
-
-### Market Concentration
-
-A small number of countries and airport hubs concentrate a significant share of European air traffic activity.
-
-### Strategic Markets
-
-Spain, Germany, United Kingdom and France emerge as the most attractive markets for future growth initiatives.
-
-### COVID Impact
-
-Air traffic experienced a severe contraction during 2020 followed by a gradual recovery.
-
----
-
-## Business Recommendations
-
-### Short Term
-
-Focus commercial and Customer Experience initiatives on high-volume airport markets.
-
-### Medium Term
-
-Monitor recovery patterns by country and airport.
-
-### Long Term
-
-Develop predictive models to anticipate market growth opportunities.
-
----
-
-## Dashboard
-
-Power BI dashboard includes:
-
-- Executive KPIs
-- Market Share Analysis
-- Airport Ranking
-- Traffic Evolution
-- Recovery Analysis
-- Strategic Recommendations
-
----
-
-## Author
-
-Gerónimo Daguerre
-
-Business Intelligence | Data Analytics | Tourism & Aviation Operations
-
-LinkedIn:
-https://www.linkedin.com/in/gerodaguerre/ 
-GitHub:
-https://github.com/gdaguerre-dot/vuelojusto-air-traffic-market-analysis
-Kaggle:
-https://www.kaggle.com/datasets/umerhaddii/european-flights-dataset 
+Proyecto desarrollado con fines educativos y de portfolio profesional, sobre un dataset público de Kaggle. El caso de negocio (VueloJusto) es ilustrativo; los criterios de priorización aplicados se apoyan en experiencia profesional real del autor en el sector aeroportuario y turístico.
