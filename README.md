@@ -23,10 +23,6 @@ La mayoría de los análisis de tráfico aéreo se detienen en el volumen qué p
 
 El volumen de operaciones se usa como proxy de demanda (el dataset no incluye datos individuales de pasajeros ni de demoras), pero la priorización final no se basa solo en volumen — combina **crecimiento sostenido de tráfico** (como proxy de tensión entre capacidad y demanda) con volumen relativo, en un **Índice de Riesgo de Congestión** construido íntegramente en DAX.
 
-## Enfoque técnico: Power BI de punta a punta
-
-A diferencia del Capítulo 01 de esta serie (SIGP-LLULL, centrado en SQL), este proyecto está pensado como demostración de dominio integral de Power BI: el SQL se usa únicamente para una validación puntual del dataset antes de cargarlo (duplicados, cobertura temporal). Desde ahí en adelante, **toda la limpieza, transformación y lógica analítica —incluida la construcción de dimensiones y el Índice de Riesgo de Congestión— se resuelve nativamente en Power Query (M) y DAX.**
-
 ## Dataset
 
 | Métrica | Valor |
