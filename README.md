@@ -107,4 +107,4 @@ Business Intelligence · Análisis de Datos · Operaciones Turísticas y de Avia
 
 ## Licencia
 
-Proyecto desarrollado con fines educativos y de portfolio profesional, sobre un dataset público de Kaggle. Los criterios de priorización aplicados se apoyan en experiencia profesional real en el sector aeroportuario y turístico y no en datos internos o confidenciales.
+Proyecto desarrollado con fines educativos y de portfolio profesional, sobre un dataset público de Kaggle. 
