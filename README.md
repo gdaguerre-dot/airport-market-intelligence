@@ -4,8 +4,8 @@
 
 Caso real de análisis aeroportuario: qué mercados europeos presentan mayor riesgo estructural de congestión — y por lo tanto, mayor oportunidad de negocio para una plataforma de compensación aérea — aplicando criterios reales de gestión aeroportuaria, no solo volumen de tráfico.
 
-📄 Documentación completa: `pdf/Airport_Market_Intelligence.pdf`
-📊 Panel de control de Power BI: `powerbi/Airport_Market_Intelligence.pbix`
+📄 Documentación completa: [`pdf/Airport_Market_Intelligence.pdf`](pdf/Airport_Market_Intelligence.pdf)
+📊 Panel de control de Power BI: [`powerbi/Airport_Market_Intelligence.pbix`](powerbi/Airport_Market_Intelligence.pbix)
 
 ## Caso de negocio: VueloJusto
 
@@ -28,7 +28,7 @@ El volumen de operaciones se usa como proxy de demanda (el dataset no incluye da
 | Aeropuertos | 332 (333 nombres, ver nota de calidad de datos) |
 | Período | 2016-01-01 a 2022-05-31 (2022 es un año parcial: enero–mayo) |
 | Grano | **Diario** por aeropuerto (columna `FLT_DATE`) — no mensual |
-| Fuente | European Flights Dataset — Kaggle |
+| Fuente | [European Flights Dataset — Kaggle](https://www.kaggle.com/datasets/umerhaddii/european-flights-dataset) |
 
 Variables principales: país (`STATE_NAME`), aeropuerto (`APT_ICAO`, `APT_NAME`), fecha (`FLT_DATE`, `YEAR`, `MONTH_NUM`), salidas/llegadas/movimientos totales (`FLT_DEP_1`, `FLT_ARR_1`, `FLT_TOT_1`), y sus equivalentes bajo reglas de vuelo instrumental (`FLT_*_IFR_2`).
 
@@ -38,7 +38,7 @@ Variables principales: país (`STATE_NAME`), aeropuerto (`APT_ICAO`, `APT_NAME`)
 
 Esquema de estrella:
 
-- **Tabla de hechos:** `Fact_TraficoAereo` (grano diario)
+- **Tabla de hechos:** `Fact_TraficoAereo`
 - **Dimensiones:** `Dim_Fecha`, `Dim_Aeropuerto`, `Dim_Pais`
 
 ## Indicadores clave de rendimiento (KPI)
@@ -96,9 +96,9 @@ El conjunto de datos no contiene información de demoras, cancelaciones ni capac
 
 ## Autor
 
-Gerónimo Daguerre — Business Intelligence · Análisis de Datos · Operaciones Turísticas y de Aviación
+**Gerónimo Daguerre** — Business Intelligence · Análisis de Datos · Operaciones Turísticas y de Aviación
 
-LinkedIn · GitHub
+[LinkedIn](https://www.linkedin.com/in/TU-USUARIO-AQUI) · [GitHub](https://github.com/TU-USUARIO-AQUI)
 
 ## Licencia
 
