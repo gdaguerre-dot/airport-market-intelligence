@@ -1,7 +1,7 @@
 ﻿/******************************************************************************
  Proyecto : Airport Market Intelligence
  Autor    : Gerónimo Daguerre
- Archivo  : 04_dimensional_model.sql
+ Archivo  : 04_dimensional_model_design.sql
 
  Objetivo
  --------
