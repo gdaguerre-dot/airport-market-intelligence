@@ -32,8 +32,8 @@
 
  • 01_importacion_dataset.sql
  • 02_exploratory_data_analysis.sql
- • 03_data_quality.sql
- • 04_dimensional_model.sql
+ • 03_data_quality_assessment.sql
+ • 04_star_schema_design.sql
 
 ******************************************************************************/
 
