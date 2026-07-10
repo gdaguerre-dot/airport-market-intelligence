@@ -1,7 +1,7 @@
 ﻿/******************************************************************************
  Proyecto : Airport Market Intelligence
  Autor    : Gerónimo Daguerre
- Archivo  : 05_kpi_queries.sql
+ Archivo  : 05_business_kpi_queries.sql
 
  Objetivo
  --------
