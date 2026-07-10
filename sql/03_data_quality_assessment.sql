@@ -1,7 +1,7 @@
 ﻿/******************************************************************************
  Proyecto : Airport Market Intelligence
  Autor    : Gerónimo Daguerre
- Archivo  : 03_data_quality.sql
+ Archivo  : 03_data_quality_assessment.sql
 
  Objetivo
  --------
