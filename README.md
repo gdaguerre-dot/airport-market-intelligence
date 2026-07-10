@@ -78,7 +78,7 @@ KPI complementario (contextual): Ingreso Comercial de Referencia, calculado a pa
 
 ## Tecnologías utilizadas
 
-Power BI · Power Query (M) · DAX · Modelado Dimensional (Star Schema) · SQL (validación inicial) · Storytelling con datos
+SQL Server · Power BI · Power Query (M) · DAX · Modelado Dimensional (Star Schema) · Storytelling con datos
 
 ## Estructura del repositorio
 
