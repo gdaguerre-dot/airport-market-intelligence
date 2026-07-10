@@ -1,6 +1,6 @@
 # Inteligencia de mercado aeroportuario
 
-`Power BI` · `Power Query (M)` · `DAX` · `Business Intelligence` · `Storytelling` · `Aviation Industry`
+`Power BI` · `Power Query (M)` · `DAX` · `SQL Server` · `Business Intelligence` · `Storytelling` · `Aviation Industry`
 
 Caso real de análisis aeroportuario: qué mercados europeos presentan mayor riesgo estructural de congestión — y por lo tanto, mayor oportunidad de negocio para una plataforma de compensación aérea — aplicando criterios reales de gestión aeroportuaria, no solo volumen de tráfico.
 
